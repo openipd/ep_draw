@@ -64,7 +64,7 @@ function showdraw(){
 
     $("#draw").hover(function(){
       clearTimeout($(this).data('timeout'));
-      $("#draw").animate({"width":"100%", "height": "100%"});;
+      $("#draw").animate({"width":"100%", "height": "100vh"});;
       clientVars.ep_draw.fullscreen = true;
     }, function(){
       var t = setTimeout(function() { // Dont zoom out right away, wait a while
@@ -101,7 +101,7 @@ function toggledraw(){
 
 function fullScreenDraw(){
   clientVars.ep_draw.fullscreen = true;
-  $("#draw").animate({"width":"100%", "height": "100%"});;
+  $("#draw").animate({"width":"100vw", "height": "100vh"});;
 }
 
 exports.postAceInit = postAceInit;
