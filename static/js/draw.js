@@ -58,7 +58,7 @@ function enabledraw(){
 
 function showdraw(){
   $("#draw").css({"z-index":"999999", "position":"absolute", "top":"0px", "right":"0px", "height":"100%", "width":"100%", "border":"1px solid #ccc"}).show();
-  $("#drawEmbed").show().css({"overflow":"hidden", "padding-top":"56.25%", "position":"relative"});
+  $("#drawEmbed").show().css({"overflow":"hidden"});
   if(clientVars.ep_draw.enabled !== true){
     enabledraw();
 
