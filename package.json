@@ -1,5 +1,5 @@
 {
-  "name": "ep_draw_s",
+  "name": "ep_draw",
   "description": "Really real time Collaborative painting and drawing with Etherpad",
   "version": "0.1.0",
   "author": {
@@ -16,10 +16,10 @@
   "engines": {
     "node": "*"
   },
-  "_id": "ep_draw_s@0.1.1",
+  "_id": "ep_draw@0.1.1",
   "readme": "ERROR: No README.md file found!",
   "dist": {
     "shasum": "927231aee0f19afa7a80fbfff8348401f15b0595"
   },
-  "_from": "ep_draw_s"
+  "_from": "ep_draw"
 }
