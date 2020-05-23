@@ -57,18 +57,18 @@ function enabledraw(){
 }
 
 function showdraw(){
-  $("#draw").css({"z-index":"999999", "position":"absolute", "top":"0px", "right":"0px", "height":"200px", "width":"200px", "border":"1px solid #ccc"}).show();
+  $("#draw").css({"z-index":"999999", "position":"absolute", "top":"0px", "right":"0px", "height":"100%", "width":"100%", "border":"1px solid #ccc"}).show();
   $("#drawEmbed").show().css({"overflow":"hidden"});
   if(clientVars.ep_draw.enabled !== true){
     enabledraw();
 
     $("#draw").hover(function(){
       clearTimeout($(this).data('timeout'));
-      $("#draw").animate({"width":"100%", "height": "100vh"});;
+      $("#draw").animate({"width":"100%", "height": "100%"});;
       clientVars.ep_draw.fullscreen = true;
     }, function(){
       var t = setTimeout(function() { // Dont zoom out right away, wait a while
-        $("#draw").animate({"width":"200px", "height": "200px"});;
+        $("#draw").animate({"width":"100%", "height": "100%"});;
         clientVars.ep_draw.fullscreen = false;
       }, 500);
       $(this).data('timeout', t);
@@ -101,7 +101,7 @@ function toggledraw(){
 
 function fullScreenDraw(){
   clientVars.ep_draw.fullscreen = true;
-  $("#draw").animate({"width":"100vw", "height": "100vh"});;
+  $("#draw").animate({"width":"100%", "height": "100%"});;
 }
 
 exports.postAceInit = postAceInit;
