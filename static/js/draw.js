@@ -50,7 +50,7 @@ function enabledraw(){
   var padID = clientVars.padId;
 
   if($("#draw").length === 0){ // If it's not available already then draw it
-    $("#editorcontainer").append("<div id=draw><iframe id='drawEmbed' src='//"+draw_host+"/d/"+padID+"?authorName="+authorName+"&authorColor="+authorColor+"' width='100vw' height='100vh' style='border:none' frameborder='0' scrolling='no'></iframe></div>");
+    $("#editorcontainer").append("<div id=draw><iframe id='drawEmbed' src='//"+draw_host+"/d/"+padID+"?authorName="+authorName+"&authorColor="+authorColor+"' width='100vw' height='100vh' style='border:none' scrolling='no'></iframe></div>");
   }
   clientVars.ep_draw.enabled = true;
   showdraw();
@@ -58,7 +58,7 @@ function enabledraw(){
 
 function showdraw(){
   $("#draw").css({"z-index":"999999", "position":"absolute", "top":"0px", "right":"0px", "height":"100%", "width":"100%", "border":"1px solid #ccc"}).show();
-  $("#drawEmbed").show().css({"overflow":"hidden"});
+  $("#drawEmbed").show().css({"overflow":"hidden", "padding-top":"56.25%", "position":"relative"});
   if(clientVars.ep_draw.enabled !== true){
     enabledraw();
 
